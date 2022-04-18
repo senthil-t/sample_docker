@@ -1,0 +1,9 @@
+---
+
+-  hosts: localhost
+   tasks:
+   - name: run docker image
+     shell: docker run -d -p 8000:5000 --name pydocker --pull always senthilt1/simplepython:latest
+
+   - name: curl image url
+     shell: curl localhost:8000
